@@ -3,7 +3,7 @@ const app = express();
 const axios = require('axios');
 
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+  res.send('Hello, World! Estate glance welcomes you!');
 });
 
 app.get('/users', async (req, res) => {
@@ -18,7 +18,6 @@ app.get('/users', async (req, res) => {
   }
 });
 
-// get api for pokemon api https://pokeapi.co/
 
 app.get('/pokemon', async (req, res) => {
   try {
