@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pokemon List</title>
+</head>
+
+<body>
+    <h1>Pokemon List</h1>
+    <ul id="pokemon-list"></ul>
+
+    <script>
+        // Get the JSON data from the server
+        const jsonData = JSON.parse('<%= JSON.stringify(pokemon) %>');
+
+        // Loop through the data and display it
+        const pokemonList = document.getElementById('pokemon-list');
+        jsonData.results.forEach(pokemon => {
+            const listItem = document.createElement('li');
+            listItem.textContent = pokemon.name;
+            pokemonList.appendChild(listItem);
+        });
+    </script>
+</body>
+
+</html>
