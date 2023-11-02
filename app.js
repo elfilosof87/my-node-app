@@ -26,6 +26,8 @@ app.get('/pokemon', async (req, res) => {
       'https://pokeapi.co/api/v2/pokemon?limit=100'
     );
     const pokemon = response.data;
+    console.log(pokemon)
+    console.log("------------------------")
     res.sendFile(__dirname + '/pages/pokemon.html', { pokemon });
   } catch (error) {
     res.status(500).json({ error: 'Unable to fetch data from the API' });
